@@ -115,3 +115,15 @@
     background-position: 0% 50%;
   }
 }
+.banner__img {
+  filter: brightness(0.5);
+}
+.banner__title {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
+  text-transform: capitalize;
+}
+.banner__description {
+  color: #ff9900;
+  font-weight: 500;
+  font-size: 18px;
+}
