@@ -23,6 +23,8 @@ const Layout = ({
         ></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -33,7 +35,19 @@ const Layout = ({
             alt="product"
           />
           <div class="carousel-caption d-none d-md-block">
-            <h2 className="display-3 banner__title">{title}</h2>
+            <h1 className="display-3 banner__title">{title}</h1>
+            <p className="banner__description">{description}</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1544511196-1646449a253b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            class="d-block w-100 banner__img"
+            style={{ height: "46vh", objectFit: "cover" }}
+            alt="product"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 className="display-3 banner__title">{title}</h1>
             <p className="banner__description">{description}</p>
           </div>
         </div>
@@ -45,7 +59,19 @@ const Layout = ({
             alt="product"
           />
           <div class="carousel-caption d-none d-md-block">
-            <h2 className="display-3 banner__title">{title}</h2>
+            <h1 className="display-3 banner__title">{title}</h1>
+            <p className="banner__description">{description}</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            class="d-block w-100 banner__img"
+            style={{ height: "46vh", objectFit: "cover" }}
+            alt="product"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 className="display-3 banner__title">{title}</h1>
             <p className="banner__description">{description}</p>
           </div>
         </div>
@@ -57,7 +83,7 @@ const Layout = ({
             alt="product"
           />
           <div class="carousel-caption d-none d-md-block">
-            <h2 className="display-3 banner__title">{title}</h2>
+            <h1 className="display-3 banner__title">{title}</h1>
             <p className="banner__description">{description}</p>
           </div>
         </div>

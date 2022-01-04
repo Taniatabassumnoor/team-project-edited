@@ -1,7 +1,13 @@
-/**
- * border radius
- */
-
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@200;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: "Poppins", sans-serif !important;
+  box-sizing: border-box;
+}
 .btn,
 .jumbotron,
 .nav :hover {
@@ -119,11 +125,105 @@
   filter: brightness(0.5);
 }
 .banner__title {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   text-transform: capitalize;
 }
 .banner__description {
   color: #ff9900;
   font-weight: 500;
   font-size: 18px;
+}
+.nav__menu--link:active {
+  outline: none;
+  border: none;
+}
+.nav__menu--link:focus {
+  outline: none;
+  border: none;
+}
+/* CoursesList section css */
+.product {
+  margin-bottom: 30px;
+}
+
+.product__card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.product__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.product__img img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.product__caption {
+  padding: 29px 20px 20px 20px;
+}
+
+.product__caption h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .product__caption h3 {
+    font-size: 16px;
+  }
+}
+
+.product__caption .product__category {
+  color: rgb(63, 81, 181);
+}
+.product__category span {
+  font-weight: 600;
+  color: #ff9900;
+}
+.product__caption p span {
+  font-size: 16px;
+}
+.badge {
+  font-weight: normal;
+  padding: 0.5rem 0.8rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .product__caption p span {
+    font-size: 12px;
+  }
+}
+
+.product__footer {
+  margin-bottom: 22px;
+  transition: 0.4s;
+}
+
+@media (max-width: 575px) {
+  .product__footer {
+    padding: 19px 10px 20px 12px;
+  }
+}
+
+.product__footer .restaurant-name p {
+  display: inline-block;
+  color: #6e7697;
+}
+
+.product__footer .price span {
+  cursor: pointer;
+  font-weight: 600;
+  color: #ff9900;
+  font-size: 26px;
+}
+.total__price span {
+  color: #ff9900;
+}
+h2 {
+  color: #44474d;
 }

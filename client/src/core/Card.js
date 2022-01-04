@@ -159,67 +159,96 @@ const Card = ({
   const classes = useStyles();
 
   return (
-    // <div className='card'>
-    //   <div className='card-header name'>{product.name}</div>
-    //   <div className='card-body'>
-    //     {shouldRedirect(redirect)}
-    //     <ShowImage item={product} url='product' />
-    //     <p className='lead mt-2'>{product.description.substring(0, 100)}</p>
-    //     <p className='black-10'>${product.price}</p>
-    //     <p className='black-9'>
-    //       Category: {product.category && product.category.name}
-    //     </p>
-    //     <p className='black-8'>
-    //       Added on {moment(product.createdAt).fromNow()}
-    //     </p>
+    <React.Fragment>
+      {/* <div className="card">
+        <div className="card-header name">{product.name}</div>
+        <div className="card-body">
+          {shouldRedirect(redirect)}
+          <ShowImage item={product} url="product" />
+          <p className="lead mt-2">{product.description.substring(0, 100)}</p>
+          <p className="black-10">${product.price}</p>
+          <p className="black-9">
+            Category: {product.category && product.category.name}
+          </p>
+          <p className="black-8">
+            Added on {moment(product.createdAt).fromNow()}
+          </p>
 
-    //     {showStock(product.quantity)}
-    //     <br></br>
+          {showStock(product.quantity)}
+          <br></br>
 
-    //     {showViewButton(showViewProductButton)}
+          {showViewButton(showViewProductButton)}
 
-    //     {showAddToCartBtn(showAddToCartButton)}
+          {showAddToCartBtn(showAddToCartButton)}
 
-    //     {showRemoveButton(showRemoveProductButton)}
+          {showRemoveButton(showRemoveProductButton)}
 
-    //     {showCartUpdateOptions(cartUpdate)}
-    //   </div>
-    // </div>
+          {showCartUpdateOptions(cartUpdate)}
+        </div>
+      </div> */}
 
-    <Container className={classes.cardGrid} maxWidth="md">
-      <CssBaseline />
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={12} md={12}>
-          <CardM className={classes.card}>
-            {shouldRedirect(redirect)}
-            <ShowImage item={product} url="product" />
-            <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h5" component="h2">
-                {product.name}
-              </Typography>
-              <Typography className={classes.productDescription}>
-                {product.description.substring(0, 100)}
-              </Typography>
-              <p className="black-10">Price: ${product.price}</p>
-              <p className="black-9">
-                Category: {product.category && product.category.name}{" "}
-              </p>{" "}
-              <p className="black-8">
-                Added on {moment(product.createdAt).fromNow()}{" "}
-              </p>
-              {showStock(product.quantity)}
-              <br></br>
-              <span>
-                {showViewButton(showViewProductButton)}
-                {showAddToCartBtn(showAddToCartButton)}
-                {showRemoveButton(showRemoveProductButton)}
-              </span>
-              {showCartUpdateOptions(cartUpdate)}
-            </CardContent>
-          </CardM>
+      {/* <Container className={classes.cardGrid} maxWidth="md">
+        <CssBaseline />
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={12} md={12}>
+            <CardM className={classes.card}>
+              {shouldRedirect(redirect)}
+              <ShowImage item={product} url="product" />
+              <CardContent className={classes.cardContent}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {product.name}
+                </Typography>
+                <Typography className={classes.productDescription}>
+                  {product.description.substring(0, 100)}
+                </Typography>
+                <p className="black-10">Price: ${product.price}</p>
+                <p className="black-9">
+                  Category: {product.category && product.category.name}{" "}
+                </p>{" "}
+                <p className="black-8">
+                  Added on {moment(product.createdAt).fromNow()}{" "}
+                </p>
+                {showStock(product.quantity)}
+                <br></br>
+                <span>
+                  {showViewButton(showViewProductButton)}
+                  {showAddToCartBtn(showAddToCartButton)}
+                  {showRemoveButton(showRemoveProductButton)}
+                </span>
+                {showCartUpdateOptions(cartUpdate)}
+              </CardContent>
+            </CardM>
+          </Grid>
         </Grid>
-      </Grid>
-    </Container>
+      </Container> */}
+      <div className="product" data-slick-index={-3} aria-hidden="true">
+        <div className="product__card">
+          <div className="product__img p-4 pb-0">
+            <ShowImage item={product} url="product" />
+          </div>
+          <div className="product__caption">
+            <p className="mb-1 product__category">
+              Category :{" "}
+              <span>{product.category && product.category.name}</span>
+            </p>
+            <p>{showStock(product.quantity)}</p>
+            <h3>{product.name}</h3>
+            <div className="product__footer">
+              <div className="restaurant-name">
+                <p>{product.description.substring(0, 100)}</p>
+              </div>
+              <div className="price">
+                <span>${product.price}</span>
+              </div>
+            </div>
+            {showViewButton(showViewProductButton)}
+            {showAddToCartBtn(showAddToCartButton)}
+            {showRemoveButton(showRemoveProductButton)}
+            {showCartUpdateOptions(cartUpdate)}
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
